@@ -33,7 +33,6 @@
   &:active {
     transform: scale(1.05);
   }
-
 }
 
 .button_outlined {
@@ -64,5 +63,19 @@
 
   &:hover {
     background-color: var(--primary-blue);
+  }
+}
+
+.button_round {
+  transition: 0.1s;
+  width: 40px;
+  height: 40px;
+  border-radius: 50%;
+  border: 2px solid var(--primary-blue);
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  &:hover {
+    background-color: var(--primary-blue-aa);
   }
 }

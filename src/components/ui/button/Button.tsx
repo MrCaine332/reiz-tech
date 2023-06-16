@@ -6,7 +6,7 @@ import styles from './Button.module.scss'
 type BaseProps = {
 	children?: React.ReactNode
 	className?: string
-	styleType?: 'simple' | 'outlined' | 'filled' | 'none'
+	styleType?: 'simple' | 'outlined' | 'filled' | 'none' | 'round'
 }
 
 type ButtonAsButton = BaseProps &

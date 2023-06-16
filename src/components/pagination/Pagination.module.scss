@@ -1,0 +1,53 @@
+.pagination {
+  list-style: none;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  gap: 12px;
+  width: 100%;
+}
+
+.paginationPage {
+  width: 25px;
+  height: 25px;
+  cursor: pointer;
+  transition: 0.1s;
+
+  &:after {
+    content: "";
+    position: absolute;
+    width: 100%;
+    height: 2px;
+    background-color: var(--primary-blue);
+    bottom: 0;
+    opacity: 0;
+  }
+
+  &:hover {
+    transform: scale(1.05);
+    color: var(--primary-blue);
+  }
+}
+
+.paginationPageLink {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+.paginationActive {
+  color: var(--primary-blue);
+  position: relative;
+
+  &:after {
+    opacity: 1;
+  }
+}
+
+.paginationNext {
+  transform: rotate(-90deg);
+}
+
+.paginationPrevious {
+  transform: rotate(90deg);
+}
