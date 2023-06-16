@@ -6,23 +6,30 @@ import Icons from "@components/ui/icons";
 import {FilterBasic} from "@modules/filter/FilterBasic";
 import {FilterAdvanced} from "@modules/filter/FilterAdvanced";
 import {Sorting, SortingOption} from "@components/sorting/Sorting";
+import {GetCountriesParams} from "@app/types/params";
 
 type FilterSortProps = {
-	filterData: any
-	setFilterData: React.Dispatch<React.SetStateAction<any>>
-	currentSortingOption: SortingOption
-	onSorting: (sortingOption: SortingOption) => void
+	filterData: GetCountriesParams
+	setFilterData: React.Dispatch<React.SetStateAction<GetCountriesParams>>
 }
 
 export type FilterProps = {
 	filterData: any
-	setFilterData: React.Dispatch<React.SetStateAction<any>>
+	setFilterData: React.Dispatch<React.SetStateAction<GetCountriesParams>>
 }
 
-const SORTING_OPTIONS = ['name', 'area', 'zone']
+const SORTING_OPTIONS = ['name', 'area', 'region']
 
-export const Filter = ({ filterData, setFilterData, currentSortingOption, onSorting }: FilterSortProps) => {
+export const Filter = ({ filterData, setFilterData }: FilterSortProps) => {
 	const [filterMode, setFilterMode] = useState<'basic' | 'advanced'>('basic')
+
+	const onSorting = (sortingOption: SortingOption) => {
+		setFilterData(prev => ({
+			...prev,
+			sortBy: sortingOption.field ?? undefined,
+			sortOrder: sortingOption.order ?? undefined
+		}))
+	}
 
 	return (
 		<Section className={styles.filterWrapper}>
@@ -40,7 +47,10 @@ export const Filter = ({ filterData, setFilterData, currentSortingOption, onSort
 			}
 
 			<Sorting options={SORTING_OPTIONS}
-			         currentOption={currentSortingOption}
+			         currentOption={{
+						 field: filterData.sortBy || null,
+				         order: filterData.sortOrder || null
+					 }}
 			         onSorting={onSorting}
 			/>
 		</Section>
