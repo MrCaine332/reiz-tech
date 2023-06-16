@@ -1,5 +1,4 @@
 import styles from './Sorting.module.scss'
-import {Section} from "@components/ui/section";
 import React from "react";
 import {Button} from "@components/ui/button";
 import Icons from "@components/ui/icons";
@@ -30,7 +29,7 @@ export const Sorting = ({ options, currentOption, onSorting }: SortingProps) => 
 	}
 
 	return (
-		<Section className={styles.sorting}>
+		<div className={styles.sorting}>
 			<div className={styles.sortButtons}>
 				Sort by:
 				{ options.map((option, index) => (
@@ -55,6 +54,6 @@ export const Sorting = ({ options, currentOption, onSorting }: SortingProps) => 
 					</Button>
 				)) }
 			</div>
-		</Section>
+		</div>
 	);
 };

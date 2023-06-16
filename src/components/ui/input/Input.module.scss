@@ -1,0 +1,24 @@
+
+.inputWrapper {
+  width: 256px;
+  height: 32px;
+  border: 2px solid transparent;
+  box-shadow: 0 0 2px 1px rgba(0,0,0,0.15);
+  display: flex;
+  align-items: center;
+  border-radius: 6px;
+  transition: 0.1s;
+
+  .input {
+    height: 100%;
+    flex-grow: 1;
+    background-color: transparent;
+    border: none;
+    outline: none;
+    padding: 0 8px;
+  }
+
+  &:focus-within {
+    border: 2px solid var(--primary-blue);
+  }
+}

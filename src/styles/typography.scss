@@ -32,47 +32,12 @@
   line-height: $line-height;
 }
 
-.textBodyLarge {
-  @include textPoppins(400, 24px, 32px);
+.textBody {
+  @include textPoppins(400, 14px, 20px);
 }
 
 .textBodyLargeBold {
-  @include textPoppins(600, 24px, 32px);
-}
-
-.textBodySmall {
-  @include textPoppins(400, 16px, 24px);
-}
-
-.textBodySmallBold {
-  @include textPoppins(500, 16px, 24px);
-}
-
-
-//////////////////// [ CAPTIONS ] ////////////////////
-
-.textCaptionLarge {
-  @include textPoppins(400, 14px, 24px);
-}
-
-.textCaptionLargeBold {
-  @include textPoppins(500, 14px, 24px);
-}
-
-.textCaptionSmall {
-  @include textPoppins(400, 12px, 20px);
-}
-
-.textCaptionSmallBold {
-  @include textPoppins(600, 12px, 20px);
-}
-
-.hairlineLarge {
-  @include textPoppins(700, 16px, 16px);
-}
-
-.hairlineSmall {
-  @include textPoppins(700, 12px, 12px);
+  @include textPoppins(600, 14px, 20px);
 }
 
 
