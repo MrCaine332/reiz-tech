@@ -1,0 +1,51 @@
+.filterWrapper {
+  display: flex;
+  flex-direction: column;
+  gap: 24px;
+
+  .switchButton {
+    transition: 0.1s;
+    display: flex;
+    gap: 4px;
+
+    svg {
+      transition: 0.1s;
+    }
+
+    span {
+      text-decoration: underline;
+    }
+
+    &:hover {
+      color: var(--primary-blue);
+
+      svg {
+        fill:var(--primary-blue) ;
+      }
+    }
+  }
+
+  .filter {
+    display: flex;
+    flex-direction: column;
+    gap: 16px;
+
+    .sortGroup {
+      display: flex;
+      align-items: center;
+      gap: 12px;
+
+      .sortButton {
+        display: flex;
+        align-items: center;
+        padding: 3px 10px;
+      }
+
+    }
+  }
+
+  .filterBasic {
+    display: flex;
+    gap: 16px;
+  }
+}
