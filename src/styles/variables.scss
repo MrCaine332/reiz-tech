@@ -25,6 +25,12 @@
 }
 
 %variables {
+  --color-background: var(--neutral-6);
+  --color-section: var(--neutral-8);
+
+  --color-text-primary: var(--neutral-2);
+  --color-text-neutral: var(--neutral-4);
+
   --box-shadow: 0 8px 48px -12px rgba(31, 47, 70, 0.25);
   --box-shadow-light: 0 4px 12px -6px rgba(31, 47, 70, 0.25);
 }
