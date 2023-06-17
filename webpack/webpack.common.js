@@ -24,7 +24,7 @@ module.exports = {
     },
     plugins: [
         new HtmlWebpackPlugin({
-            template: path.resolve(__dirname, '..', './src/app/index.html')
+            template: path.resolve(__dirname, '..', './public/index.html')
         }),
         new MiniCssExtractPlugin(),
         new webpack.DefinePlugin({
