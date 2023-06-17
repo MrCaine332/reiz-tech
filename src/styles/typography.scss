@@ -1,4 +1,4 @@
-@import url('https://fonts.googleapis.com/css2?family=DM+Sans:wght@700&family=Poppins:wght@400;500;600;700&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=DM+Sans:wght@500;700&family=Poppins:wght@400;500;600;700&display=swap');
 
 //////////////////// [ HEADERS ] ////////////////////
 
@@ -16,11 +16,9 @@
 
 .textHeadline2 { @include textHeadline(48px, 56px); }
 
-.textHeadline3 { @include textHeadline(40px, 48px); }
+.textHeadline3 { @include textHeadline(32px, 48px); }
 
-.textHeadline4 { @include textHeadline(32px, 40px); }
-
-.textHeadline5 { @include textHeadline(24px, 32px); }
+.textHeadline4 { @include textHeadline(24px, 32px); }
 
 //////////////////// [ BODY TEXT ] ////////////////////
 
@@ -33,11 +31,11 @@
 }
 
 .textBody {
-  @include textPoppins(400, 14px, 20px);
+  @include textPoppins(400, 12pt, 20px);
 }
 
-.textBodyLargeBold {
-  @include textPoppins(600, 14px, 20px);
+.textBodyBold {
+  @include textPoppins(600, 12pt, 20px);
 }
 
 
@@ -46,7 +44,7 @@
 .textButton {
   font-family: 'DM Sans';
   font-style: normal;
-  font-weight: 700;
+  font-weight: 500;
   font-size: 16px;
   line-height: 16px;
 }
