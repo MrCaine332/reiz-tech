@@ -1,8 +1,8 @@
 import ReactPaginate from "react-paginate";
-import styles from './Pagination.module.scss'
 import {Section} from "@components/ui/section";
 import {Button} from "@components/ui/button";
 import Icons from "@components/ui/icons";
+import styles from './Pagination.module.scss'
 
 type PaginationProps = {
 	pageCount: number

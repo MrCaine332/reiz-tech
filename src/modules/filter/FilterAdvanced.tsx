@@ -1,8 +1,8 @@
 import {FilterProps} from "@modules/filter/Filter";
-import {Input} from "@components/ui/input";
-import styles from './Filter.module.scss'
 import {GetCountriesParams} from "@app/types/params";
+import {Input} from "@components/ui/input";
 import {Select} from "@components/ui/select";
+import styles from './Filter.module.scss'
 
 const REGION_OPTIONS = [
 	{ value: 'Africa', name: 'Africa'},

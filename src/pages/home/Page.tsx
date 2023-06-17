@@ -7,7 +7,7 @@ import {GetCountriesParams} from "@app/types/params";
 import {useDebounceEffect} from "@app/hooks/useDebounceEffect";
 import {Pagination} from "@components/pagination";
 
-export const Basic = () => {
+export const Home = () => {
 	const [isLoading, setIsLoading] = useState(false)
 	const [filterData, setFilterData] = useState<GetCountriesParams>({
 		_limit: 10, _page: 1

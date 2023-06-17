@@ -27,7 +27,6 @@ export const Select = ({
 	dropdownClassName,
 	placeholder
 }: SelectProps) => {
-
 	const [isOpened, setIsOpened] = useState<boolean>(false)
 	const [highlightedIndex, setHighlightedIndex] = useState(0)
 

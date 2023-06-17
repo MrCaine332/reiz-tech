@@ -1,7 +1,7 @@
 import {FilterProps} from "@modules/filter/Filter";
 import {Button} from "@components/ui/button";
-import styles from './Filter.module.scss'
 import {getCountriesByName} from "@app/http/api-calls";
+import styles from './Filter.module.scss'
 
 export const FilterBasic = ({ setFilterData }: FilterProps) => {
 

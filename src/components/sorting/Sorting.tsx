@@ -1,7 +1,7 @@
-import styles from './Sorting.module.scss'
 import React from "react";
 import {Button} from "@components/ui/button";
 import Icons from "@components/ui/icons";
+import styles from './Sorting.module.scss'
 
 export type SortingOption = {
 	field: string | null

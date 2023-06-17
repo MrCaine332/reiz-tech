@@ -1,4 +1,3 @@
-import styles from './Filter.module.scss'
 import {Section} from "@components/ui/section";
 import React, {useState} from "react";
 import {Button} from "@components/ui/button";
@@ -7,6 +6,7 @@ import {FilterBasic} from "@modules/filter/FilterBasic";
 import {FilterAdvanced} from "@modules/filter/FilterAdvanced";
 import {Sorting, SortingOption} from "@components/sorting/Sorting";
 import {GetCountriesParams} from "@app/types/params";
+import styles from './Filter.module.scss'
 
 type FilterSortProps = {
 	filterData: GetCountriesParams
@@ -21,7 +21,7 @@ export type FilterProps = {
 const SORTING_OPTIONS = ['name', 'area', 'region']
 
 export const Filter = ({ filterData, setFilterData }: FilterSortProps) => {
-	const [filterMode, setFilterMode] = useState<'basic' | 'advanced'>('basic')
+	const [filterMode, setFilterMode] = useState<'home' | 'advanced'>('home')
 
 	const onSorting = (sortingOption: SortingOption) => {
 		setFilterData(prev => ({
@@ -35,13 +35,13 @@ export const Filter = ({ filterData, setFilterData }: FilterSortProps) => {
 		<Section className={styles.filterWrapper}>
 			<Button styleType="none"
 			        className={styles.switchButton}
-			        onClick={() => setFilterMode(prev => prev === 'basic' ? 'advanced' : 'basic')}
+			        onClick={() => setFilterMode(prev => prev === 'home' ? 'advanced' : 'home')}
 			>
 				<Icons name={"cog"} size={15} />
-				Switch to <span>{filterMode === 'advanced' ? 'basic' : 'advanced'}</span> mode
+				Switch to <span>{filterMode === 'advanced' ? 'home' : 'advanced'}</span> mode
 			</Button>
 
-			{ filterMode === 'basic'
+			{ filterMode === 'home'
 				? <FilterBasic filterData={filterData} setFilterData={setFilterData} />
 				: <FilterAdvanced filterData={filterData} setFilterData={setFilterData} />
 			}

@@ -30,29 +30,30 @@
 }
 
 
-.countryItem {
+// Styles for skeleton
 
-  .countryItemSceletonImage {
+.countryItem {
+  .countryItemSkeletonImage {
     width: 100px;
     height: 75px;
   }
-  .countryItemSceletonDetails {
+  .countryItemSkeletonDetails {
     display: flex;
     flex-direction: column;
 
-    .countryItemSceletonTitle {
+    .countryItemSkeletonTitle {
       height: 32px;
       width: 250px;
       margin-bottom: 8px;
     }
 
-    .countryItemSceletonField {
+    .countryItemSkeletonField {
       height: 20px;
       width: 140px;
       margin-bottom: 4px;
     }
 
-    .countryItemSceletonWikipedia {
+    .countryItemSkeletonWikipedia {
       margin-top: 4px;
       height: 34px;
       width: 155px;

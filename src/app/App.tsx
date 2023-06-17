@@ -1,11 +1,11 @@
 import React from 'react';
-import {Basic} from "@pages/basic/Page";
+import {Home} from "@pages/home";
 
 function App() {
 	return (
 		<div className="App theme">
 			<div className="container">
-				<Basic />
+				<Home />
 			</div>
 		</div>
 	);

@@ -1,11 +1,10 @@
 import {Section} from "@components/ui/section";
-import styles from './CountriesList.module.scss'
-import {CountryItem} from "@components/country-item";
+import {CountryItem, CountryItemSkeleton} from "@components/country-item";
 import {Country} from "@app/types/models";
 import {useState} from "react";
-import {CountryItemSceleton} from "@components/country-item/CountryItemSceleton";
 import {Divider} from "@components/ui/divider";
 import {Checkbox} from "@components/ui/checkbox";
+import styles from './CountriesList.module.scss'
 
 type CountriesListProps = {
 	countries: Country[]
@@ -32,7 +31,7 @@ export const CountriesList = ({ countries, isLoading }: CountriesListProps) => {
 			{ isLoading && Array.from(Array(10).keys()).map((_, index) => (
 				<>
 					{ index > 0 ? <Divider /> : null }
-					<CountryItemSceleton />
+					<CountryItemSkeleton />
 				</>
 			))}
 		</Section>

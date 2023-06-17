@@ -6,6 +6,11 @@ import _ from "lodash";
 export const getCountries = async (params: GetCountriesParams) => {
 	const { data: countries } = await $api.get<Country[]>('/all?fields=name,region,area,flags')
 
+	/** Since restcountries api does not provide necessary for
+	 *  filtering and/or pagination query params,
+	 *  it was necessary to implement filtering/pagination between requests */
+
+	/** Filter all countries by specified params */
 	const filteredCountries = _.filter(countries, (country) => {
 		if (params.name && !country.name.common.toLowerCase().includes(params.name.toLowerCase())) {
 			return false
@@ -23,6 +28,7 @@ export const getCountries = async (params: GetCountriesParams) => {
 		return true
 	})
 
+	/** Sort filtered countries by specified params */
 	let sortedCountries = filteredCountries
 
 	if (params.sortBy && params.sortOrder) {
@@ -31,11 +37,15 @@ export const getCountries = async (params: GetCountriesParams) => {
 			[params.sortOrder])
 	}
 
+	/** Paginate sorted countries.
+	 *  Default value is 10 countries per 1 page.*/
 	const paginatedCountries = _.slice(sortedCountries,
 		(params._page - 1) * params._limit,
 		(params._page - 1) * params._limit + params._limit
 	)
 
+	/** Return total number of countries for pagination
+	 *  and 10 countries regarding current page */
 	return { total: sortedCountries.length, countries: paginatedCountries }
 }
 
