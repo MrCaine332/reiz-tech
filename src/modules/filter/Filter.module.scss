@@ -48,4 +48,19 @@
     display: flex;
     gap: 16px;
   }
+
+  .filterAdvanced {
+    display: flex;
+    gap: 12px;
+
+    .filterAdvancedSearch {
+      width: 40%;
+    }
+    .filterAdvancedSelect {
+      width: 30%;
+    }
+    .filterAdvancedAreas {
+      width: 15%;
+    }
+  }
 }

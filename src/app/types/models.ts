@@ -11,4 +11,9 @@ export type Country = {
 	}
 	region: string
 	area: number
+	flags: {
+		png: string
+		svg: string
+		alt: string
+	}
 }

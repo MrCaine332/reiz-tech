@@ -14,7 +14,7 @@ type FilterSortProps = {
 }
 
 export type FilterProps = {
-	filterData: any
+	filterData: GetCountriesParams
 	setFilterData: React.Dispatch<React.SetStateAction<GetCountriesParams>>
 }
 

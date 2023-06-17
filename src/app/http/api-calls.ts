@@ -4,10 +4,10 @@ import {Country} from "@app/types/models";
 import _ from "lodash";
 
 export const getCountries = async (params: GetCountriesParams) => {
-	const { data: countries } = await $api.get<Country[]>('/all?fields=name,region,area')
+	const { data: countries } = await $api.get<Country[]>('/all?fields=name,region,area,flags')
 
 	const filteredCountries = _.filter(countries, (country) => {
-		if (params.name && !country.name.common.includes(params.name)) {
+		if (params.name && !country.name.common.toLowerCase().includes(params.name.toLowerCase())) {
 			return false
 		}
 		if (params.region && country.region !== params.region) {
