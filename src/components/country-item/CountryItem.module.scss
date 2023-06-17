@@ -1,0 +1,61 @@
+.countryItem {
+  display: flex;
+  gap: 20px;
+  width: 100%;
+
+  .countryItemFlag {
+    width: 100px;
+
+    img {
+      width: 100%;
+    }
+  }
+
+  .countryItemDetails {
+    display: flex;
+    flex-direction: column;
+
+    h4 {
+      margin-bottom: 8px;
+    }
+
+    .countryItemField {
+      width: max-content;
+    }
+
+    .countryItemWikipediaButton {
+      margin-top: 8px;
+    }
+  }
+}
+
+
+.countryItem {
+
+  .countryItemSceletonImage {
+    width: 100px;
+    height: 75px;
+  }
+  .countryItemSceletonDetails {
+    display: flex;
+    flex-direction: column;
+
+    .countryItemSceletonTitle {
+      height: 32px;
+      width: 250px;
+      margin-bottom: 8px;
+    }
+
+    .countryItemSceletonField {
+      height: 20px;
+      width: 140px;
+      margin-bottom: 4px;
+    }
+
+    .countryItemSceletonWikipedia {
+      margin-top: 4px;
+      height: 34px;
+      width: 155px;
+    }
+  }
+}
