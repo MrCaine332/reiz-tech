@@ -1,18 +1,18 @@
 import {FilterProps} from "@modules/filter/Filter";
 import {Button} from "@components/ui/button";
 import {getCountriesByName} from "@app/http/api-calls";
-import styles from './Filter.module.scss'
+import styles from "./Filter.module.scss"
 
 export const FilterBasic = ({ setFilterData }: FilterProps) => {
 
 	const setFilterSmallerThanLithuania = () => {
-		getCountriesByName('Lithuania')
+		getCountriesByName("Lithuania")
 			.then((res) => {
 				const countryLithuania = res[0]
 				setFilterData(prev => ({
 					_limit: prev._limit,
 					_page: 1,
-					maxArea: countryLithuania.area
+					maxArea: countryLithuania.area,
 				}))
 			})
 	}

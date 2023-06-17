@@ -1,6 +1,6 @@
-import axios from 'axios';
+import axios from "axios";
 
-export const API_URL = 'https://restcountries.com/v3.1'
+export const API_URL = "https://restcountries.com/v3.1"
 
 const $api = axios.create({
 	withCredentials: true,

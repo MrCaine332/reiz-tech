@@ -60,3 +60,9 @@
     }
   }
 }
+
+@media (max-width: 520px) {
+  .countryItem {
+    flex-direction: column;
+  }
+}

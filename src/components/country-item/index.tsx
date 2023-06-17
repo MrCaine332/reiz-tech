@@ -1,2 +1,2 @@
-export { CountryItem } from './CountryItem'
-export { CountryItemSkeleton } from './CountryItemSkeleton'
+export { CountryItem } from "./CountryItem"
+export { CountryItemSkeleton } from "./CountryItemSkeleton"

@@ -4,10 +4,11 @@
   justify-content: center;
   align-items: center;
   gap: 12px;
-  width: 100%;
+  overflow: hidden;
 }
 
 .paginationPage {
+  position: relative;
   width: 25px;
   height: 25px;
   cursor: pointer;
@@ -54,4 +55,13 @@
 
 .paginationDisabled {
   opacity: 0.3;
+}
+
+@media screen and (max-width: 350px) {
+  .paginationPage {
+    display: none;
+  }
+  .paginationActive {
+    display: block;
+  }
 }

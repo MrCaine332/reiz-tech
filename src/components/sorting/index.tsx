@@ -1,1 +1,1 @@
-export { Sorting } from './Sorting'
+export { Sorting } from "./Sorting"

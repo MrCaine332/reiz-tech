@@ -2,7 +2,7 @@ import ReactPaginate from "react-paginate";
 import {Section} from "@components/ui/section";
 import {Button} from "@components/ui/button";
 import Icons from "@components/ui/icons";
-import styles from './Pagination.module.scss'
+import styles from "./Pagination.module.scss"
 
 type PaginationProps = {
 	pageCount: number
@@ -43,7 +43,6 @@ export const Pagination = ({ pageCount, currentPage, onPageChange }: PaginationP
 					               <Icons name={"arrow-down-simple"} size={18}/>
 				               </Button>
 			               }
-			               renderOnZeroPageCount={() => <></>}
 			               disabledClassName={styles.paginationDisabled}
 			/>
 		</Section>

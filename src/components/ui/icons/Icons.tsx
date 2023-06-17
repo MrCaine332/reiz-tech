@@ -1,6 +1,6 @@
-import React from 'react';
+import React from "react";
 
-export type IconNames = 'cog' | 'arrow-down-simple' | 'close'
+export type IconNames = "cog" | "arrow-down-simple" | "close"
 
 interface IIcons {
 	name?: IconNames

@@ -1,6 +1,6 @@
 import {Country} from "@app/types/models";
 import {Button} from "@components/ui/button";
-import styles from './CountryItem.module.scss'
+import styles from "./CountryItem.module.scss"
 
 type CountryItemProps = {
 	country: Country

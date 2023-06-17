@@ -7,5 +7,5 @@ export type GetCountriesParams = {
 	region?: string
 	name?: string
 	sortBy?: string
-	sortOrder?: 'asc' | 'desc'
+	sortOrder?: "asc" | "desc"
 }

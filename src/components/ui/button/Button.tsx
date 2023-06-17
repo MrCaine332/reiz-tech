@@ -1,27 +1,27 @@
-import React from 'react'
-import { Link } from 'react-router-dom'
-import type { LinkProps } from 'react-router-dom'
-import styles from './Button.module.scss'
+import React from "react"
+import { Link } from "react-router-dom"
+import type { LinkProps } from "react-router-dom"
+import styles from "./Button.module.scss"
 
 type BaseProps = {
 	children?: React.ReactNode
 	className?: string
-	styleType?: 'simple' | 'outlined' | 'filled' | 'none' | 'round'
+	styleType?: "simple" | "outlined" | "filled" | "none" | "round"
 }
 
 type ButtonAsButton = BaseProps &
 	Omit<React.ButtonHTMLAttributes<HTMLButtonElement>, keyof BaseProps> & {
-	as?: 'button'
+	as?: "button"
 }
 
 type ButtonAsLink = BaseProps &
 	Omit<LinkProps, keyof BaseProps> & {
-	as: 'link'
+	as: "link"
 }
 
 type ButtonAsExternal = BaseProps &
 	Omit<React.AnchorHTMLAttributes<HTMLAnchorElement>, keyof BaseProps> & {
-	as: 'externalLink'
+	as: "externalLink"
 }
 
 type ButtonProps =
@@ -31,26 +31,26 @@ type ButtonProps =
 
 export const Button = (props: ButtonProps) => {
 	const combinedClassName = [
-		'textButton',
+		"textButton",
 		styles.button,
 		props.styleType
-			? styles['button_' + props.styleType] ?? ''
+			? styles["button_" + props.styleType] ?? ""
 			: styles.button_simple,
-		props.className ?? ''
-	].join(' ')
+		props.className ?? ""
+	].join(" ")
 
-	if (props.as === 'link') {
+	if (props.as === "link") {
 		const {className, styleType, as, ...rest} = props
 		return <Link className={combinedClassName} {...rest}>
 			{ props.children }
 		</Link>
 
-	} else if (props.as === 'externalLink') {
+	} else if (props.as === "externalLink") {
 		const {className, styleType, as, ...rest} = props
 		return (
 			<a className={combinedClassName}
-               target='_blank'
-               rel='noopener noreferrer'
+               target="_blank"
+               rel="noopener noreferrer"
                {...rest}
 			>
 				{ props.children }

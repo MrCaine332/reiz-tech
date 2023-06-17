@@ -1,4 +1,4 @@
-import React, {useEffect, useRef, useState} from 'react';
+import React, {useEffect, useRef, useState} from "react";
 import styles from "./Select.module.scss"
 import Icons from "@components/ui/icons";
 import {Button} from "@components/ui/button";
@@ -43,8 +43,8 @@ export const Select = ({
 			if (!wrapRef.current?.contains(e.target as Node))
 				setIsOpened(false)
 		}
-		document.addEventListener('click', listener)
-		return () => document.removeEventListener('click', listener)
+		document.addEventListener("click", listener)
+		return () => document.removeEventListener("click", listener)
 	}, [])
 
 	useEffect(() => {
@@ -87,8 +87,8 @@ export const Select = ({
 			}
 		}
 
-		wrapRef.current?.addEventListener('keydown', keyPressHandler)
-		return () => wrapRef.current?.removeEventListener('keydown', keyPressHandler)
+		wrapRef.current?.addEventListener("keydown", keyPressHandler)
+		return () => wrapRef.current?.removeEventListener("keydown", keyPressHandler)
 	}, [isOpened, highlightedIndex])
 
 
@@ -96,7 +96,7 @@ export const Select = ({
 		<div className={[
 				 styles.selectWrapper,
 				 wrapperClassName
-			 ].join(' ')}
+			 ].join(" ")}
 		     onClick={() => setIsOpened(prev => !prev)}
 		     tabIndex={0}
 		     ref={wrapRef}
@@ -119,8 +119,8 @@ export const Select = ({
 				</Button>
 				<div className={[
 					styles.selectUtilsArrow,
-					isOpened ? styles.selectUtilsArrow_rotated : ''
-				].join(' ')}>
+					isOpened ? styles.selectUtilsArrow_rotated : ""
+				].join(" ")}>
 					<Icons name="arrow-down-simple" size={20}/>
 				</div>
 			</div>
@@ -129,7 +129,7 @@ export const Select = ({
                 <div className={[
 						 styles.selectListWrapper,
 	 	                 dropdownClassName
-                     ].join(' ')}
+                     ].join(" ")}
                      ref={listRef}
                 >
                     <ul className={styles.selectList}>
@@ -139,9 +139,9 @@ export const Select = ({
 							    onMouseEnter={() => setHighlightedIndex(index)}
 							    className={[
 								    styles.selectListItem,
-								    option.value === selectedValue ? styles.selectListItem_selected : '',
-								    highlightedIndex === index ? styles.selectListItem_highlighted : ''
-							    ].join(' ')}
+								    option.value === selectedValue ? styles.selectListItem_selected : "",
+								    highlightedIndex === index ? styles.selectListItem_highlighted : ""
+							    ].join(" ")}
 							>
 								{option.name}
 							</li>

@@ -50,17 +50,36 @@
   }
 
   .filterAdvanced {
-    display: flex;
+    display: grid;
+    grid-template-columns: 4fr 3fr 1.5fr 1.5fr;
     gap: 12px;
 
     .filterAdvancedSearch {
-      width: 40%;
+      width: 100%;
     }
     .filterAdvancedSelect {
-      width: 30%;
+      width: 100%;
+
     }
     .filterAdvancedAreas {
-      width: 15%;
+      width: 100%;
+    }
+  }
+}
+
+@media (max-width: 800px) {
+  .filterWrapper .filterAdvanced {
+    grid-template-columns: 1fr 1fr;
+  }
+}
+
+@media (max-width: 520px) {
+  .filterWrapper {
+    .filterBasic {
+      flex-direction: column;
+    }
+    .filterAdvanced {
+      grid-template-columns: 1fr;
     }
   }
 }

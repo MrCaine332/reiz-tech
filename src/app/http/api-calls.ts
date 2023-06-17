@@ -4,7 +4,7 @@ import {Country} from "@app/types/models";
 import _ from "lodash";
 
 export const getCountries = async (params: GetCountriesParams) => {
-	const { data: countries } = await $api.get<Country[]>('/all?fields=name,region,area,flags')
+	const { data: countries } = await $api.get<Country[]>("/all?fields=name,region,area,flags")
 
 	/** Since restcountries api does not provide necessary for
 	 *  filtering and/or pagination query params,
@@ -33,7 +33,7 @@ export const getCountries = async (params: GetCountriesParams) => {
 
 	if (params.sortBy && params.sortOrder) {
 		sortedCountries = _.orderBy(filteredCountries,
-			[params.sortBy === 'name' ? 'name.common' : params.sortBy],
+			[params.sortBy === "name" ? "name.common" : params.sortBy],
 			[params.sortOrder])
 	}
 

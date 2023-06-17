@@ -1,4 +1,6 @@
 .sorting {
+  display: flex;
+  gap: 8px;
 
   .sortButtons {
     display: flex;
@@ -27,5 +29,11 @@
         }
       }
     }
+  }
+}
+
+@media (max-width: 520px) {
+  .sorting {
+    flex-direction: column;
   }
 }
