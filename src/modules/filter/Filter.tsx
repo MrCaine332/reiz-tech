@@ -42,10 +42,13 @@ export const Filter = ({ filterData, setFilterData }: FilterSortProps) => {
 				Switch to <span>{filterMode === "advanced" ? "default" : "advanced"}</span> mode
 			</Button>
 
+			<Divider />
+
 			{ filterMode === "default"
 				? <FilterBasic filterData={filterData} setFilterData={setFilterData} />
 				: <FilterAdvanced filterData={filterData} setFilterData={setFilterData} />
 			}
+
 			<Divider />
 
 			<Sorting options={SORTING_OPTIONS}
