@@ -33,7 +33,7 @@ export const Basic = () => {
 		<div className="page">
 			<Filter filterData={filterData} setFilterData={setFilterData} />
 			<CountriesList countries={data.countries} isLoading={isLoading} />
-			<Pagination pageCount={data.total / filterData._limit}
+			<Pagination pageCount={Math.ceil(data.total / filterData._limit)}
 			            currentPage={filterData._page - 1}
 			            onPageChange={(page) =>
 				            setFilterData(prev => ({...prev, _page: page + 1}))}

@@ -11,11 +11,16 @@ type PaginationProps = {
 }
 
 export const Pagination = ({ pageCount, currentPage, onPageChange }: PaginationProps) => {
+	const onPageClick = (selected: number) => {
+		onPageChange?.(selected)
+		window.scrollTo(0, 0)
+	}
+
 	return (
 		<Section>
 			<ReactPaginate pageCount={pageCount}
 			               forcePage={currentPage}
-			               onPageChange={({ selected }) => onPageChange?.(selected) }
+			               onPageChange={({ selected }) => onPageClick(selected) }
 			               className={styles.pagination}
 			               activeClassName={styles.paginationActive}
 
@@ -38,6 +43,8 @@ export const Pagination = ({ pageCount, currentPage, onPageChange }: PaginationP
 					               <Icons name={"arrow-down-simple"} size={18}/>
 				               </Button>
 			               }
+			               renderOnZeroPageCount={() => <></>}
+			               disabledClassName={styles.paginationDisabled}
 			/>
 		</Section>
 	);
