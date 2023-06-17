@@ -1,6 +1,6 @@
 # Reiz Tech test assignment
 
-This project is built as assignment for Reiz Tech Talents Team
+This project is built as assignment for Reiz Tech Talents Team.\
 Live Version: [https://rt.arkheg.com/](https://rt.arkheg.com/)
 
 ## Available Scripts
