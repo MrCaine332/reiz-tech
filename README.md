@@ -1,6 +1,6 @@
-# Reiz Tech test assignment
+# Countries Filter
 
-This project is built as assignment for Reiz Tech Talents Team.\
+Project uses https://restcountries.com API.\
 Live Version: [https://rt.arkheg.com/](https://rt.arkheg.com/)
 
 ## Available Scripts
